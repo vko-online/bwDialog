@@ -1,0 +1,21 @@
+<div class="table-bordered col-lg-4 col-md-6 col-sm-6 col-xs-9 modal-dialog" ng-show="isShowing" style="background:white">
+    <div class="alert">
+        <div id="bw-draggable" class="modal-title">
+            <b class="pull-left">{{header}}</b>
+            <a href class="close pull-right" ng-show="showClose" id="bw-close">?</a>
+        </div>
+        <hr>
+        <div ng-transclude class="modal-body"></div>
+
+
+        <div class="modal-footer">
+            <div class="pull-left">
+                <em class="small">Window will close in {{timeout}} seconds</em>
+            </div>
+            <div class="pull-right">
+                <a class="btn btn-primary" ng-show="showOk" ng-click="okAction()" id="bw-ok">OK{{}}</a>
+                <a class="btn btn-default" ng-show="showCancel" ng-click="cancelAction()" id="bw-cancel">Cancel{{}}</a>
+            </div>
+        </div>
+    </div>
+</div>
